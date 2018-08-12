@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.darkForm {
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  max-width:500px;
+   background: #000;   
+    color: #FFF;
+}
+
+fieldset {
+  border: medium none !important;
+  margin:  10px;
+ 
+  padding: 0;
+}
+
+.darkForm input[type="text"],
+.darkForm input[type="email"],
+.darkForm input[type="tel"],
+.darkForm textarea {
+  width: 95%;
+  border: 1px solid #232222;
+  background: #323232;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.darkForm input[type="text"]:hover,
+.darkForm input[type="email"]:hover,
+.darkForm input[type="tel"]:hover,
+.darkForm textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #464141;
+}
+
+.darkForm textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.darkForm button {
+  cursor: pointer;
+  width: 70%;
+  border: none;
+  background: #e7a331;
+  color: #FFF;
+  padding: 10px;
+  font-size: 16px;
+  font-weight:bold;
+   border-radius: 5px; 
+   margin-left:15%;
+  margin-right:auto;
+}
+
+.darkForm button:hover {
+  background: #e77631;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.darkForm button:disabled {
+background:#CCC;
+cursor:default;
+}
+
+.wawformError
+{
+	font-size:14px;
+	color:#C00;
+	  transition:1s ease-in-out  ;
+
+	
+	}
+
+
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+

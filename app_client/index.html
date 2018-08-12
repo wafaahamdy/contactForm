@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Waw simple Angular contact form </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- waw form css Files  -->
+<link href="src/waw-form/waw-form.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+body{font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif}
+h2{border-bottom:#CCC solid 2px;
+padding-bottom:10px;
+margin-bottom:30px;
+}
+#wafaa_footer{
+	background:#FFC;
+	text-align:center;
+	padding:20px;
+	margin:10px;
+	}
+	.instructions{
+		margin:30px;
+		
+	}
+	
+	.instructions ul li{
+		margin:10px 0 10px 0 ;
+		}
+</style>
+</head>
+
+<body  ng-app="App">
+<h2> Angular contact us form component</h2>
+ <div  >
+        <h4> Contact Us</h4>
+  
+  <waw-form> </waw-form>
+ 
+
+ </div>
+ 
+ 
+ 
+ <div class="instructions" >
+ 
+<strong> to use this component </strong> 
+<ul>
+<li> Import css, Js files for the component </li>
+<li> Adjust the path of the URL template ,  in configuration of the component </li>
+<li> Add component code to html file </li>
+
+</ul>
+
+</div>
+
+
+
+
+
+
+<div id= "wafaa_footer" > 
+ <div> <strong>  Developed by <a href="mailto:eng.wafaa.hamdy@gmail.com" >  Wafaa Hamdy </a> Full stack web developer </strong>  </div>
+ </div>
+  
+
+
+
+<!---------  Angular & App  files  --------->
+<script src="lib/angular.min.js"></script>
+<script src="src/main.module.js"></script>
+
+
+<!---------  Component files  --------->
+ <script src="src/waw-form/waw-form.js"></script>
+	
+    
+</body>
+</html>

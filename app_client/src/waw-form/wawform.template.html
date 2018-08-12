@@ -1,0 +1,42 @@
+<form  name= "wawForm"   class="darkForm" novalidate >
+    <fieldset>
+      <input placeholder="Your name (required)" type="text" tabindex="1" ng-model="$ctrl.wawfeedback.from"  name = "wawName"  required >
+      
+<div ng-if = "wawForm.wawName.$error.required  && wawForm.wawName.$touched && !wawForm.$pristine "  class="wawformError" >
+   Please enter your name</div>
+
+    </fieldset>
+     <fieldset>
+      <input placeholder="Subject (required)" type="text" tabindex="1" ng-model="$ctrl.wawfeedback.subject"  name = "wawsubj"  required >
+      
+<div ng-if = "wawForm.wawName.$error.required  && wawForm.wawName.$touched && !wawForm.$pristine "  class="wawformError" >
+   Please enter your name</div>
+
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address (required)" type="email" tabindex="2"  ng-model="$ctrl.wawfeedback.Email"  name = "wawEmail" required>
+      <div ng-if = "(wawForm.wawEmail.$invalid || wawForm.wawEmail.$error.required) && wawForm.wawEmail.$touched && !wawForm.$pristine"  class="wawformError" >
+ Please enter valid email address </div>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" name = "wawPhone" ng-model="$ctrl.wawfeedback.Phone"  >
+      <div ng-if = "wawForm.wawPhone.$invalid"  class="wawformError" >
+ Please enter valid phone number </div>
+    </fieldset>
+     <fieldset>
+      <textarea placeholder="Type your message here.... (required)" tabindex="5"  name = "wawMessage"  ng-model="$ctrl.wawfeedback.Message"
+      required maxlength="500"  ></textarea>
+       {{$ctrl.wawfeedback.Message.length}} / 500    
+   <div ng-if = "wawForm.wawMessage.$error.required  && wawForm.wawMessage.$touched && !wawForm.$pristine"  class="wawformError" >
+    <div>Please enter your message with max 500 charcters</div>
+   
+</div>
+
+    </fieldset> 
+    <div ng-if = "wawForm.$invalid && !wawForm.$pristine"  class="wawformError" >
+ Complete all required fields </div>
+    <fieldset>
+      <button name="wawBtn" type="button" ng-click = "$ctrl.wawSend() ; wawForm.$setPristine(); " ng-disabled="wawForm.$invalid" > <i class="fa fa-paper-plane" ></i> Send</button>
+    </fieldset>
+ <div class="alert alert-success" > Thanks for contacting us , wait for our reply soon </div>
+  </form>
