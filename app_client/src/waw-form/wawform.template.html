@@ -1,3 +1,5 @@
+ <div class="alert alert-success" ng-if = "$ctrl.succmsg " style="color:green" > Thanks for contacting us , wait for our reply soon <br/> </div>
+ 
 <form  name= "wawForm"   class="darkForm" novalidate >
     <fieldset>
       <input placeholder="Your name (required)" type="text" tabindex="1" ng-model="$ctrl.wawfeedback.from"  name = "wawName"  required >
@@ -38,5 +40,5 @@
     <fieldset>
       <button name="wawBtn" type="button" ng-click = "$ctrl.wawSend() ; wawForm.$setPristine(); " ng-disabled="wawForm.$invalid" > <i class="fa fa-paper-plane" ></i> Send</button>
     </fieldset>
- <div class="alert alert-success" > Thanks for contacting us , wait for our reply soon </div>
+
   </form>

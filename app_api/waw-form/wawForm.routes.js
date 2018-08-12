@@ -3,6 +3,7 @@
 var express = require('express');
 var wawrouter = express.Router();
 var Mailer = require('../mailer.js');  /// link to file that contains mailer configs
+var config =require('../config/app.config.js')
 
 
 /***********  send contact as email  rout ****************/
@@ -13,7 +14,7 @@ console.log (req.body) ;
  
    var mailOptions = {
     from: req.body.Email , // sender address
-    to: "recieveremail@gmail.com", // list of receivers
+    to: config.recieverEmail , // list of receivers
     subject: req.body.subject, // Subject line    <div> <strong> </strong> </div>
     //text: text ,//, // plaintext body
    html: ' <div> you got this email from your website through <strong> waw form component </strong> </div> <div> <strong> Sender Name : </strong> '+ req.body.from+' </div> <div> <strong> Sender Email:  </strong> '+ req.body.Email+' </div> <div> <strong>Sender Phone:  </strong> '+req.body.Phone+' </div> <div> <strong> Mail Subject : </strong> '+req.body.subject+' </div> <div> <strong> Mail Body :  </strong> </div> ' + req.body.Message

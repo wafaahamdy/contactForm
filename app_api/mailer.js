@@ -1,10 +1,12 @@
 var nodemailer = require('nodemailer');
+var config =require('./config/app.config.js')
+
 //use google as mail server 
      var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'youremail@gmail.com', // Your email id
-            pass: 'emailpassword' // Your password
+            user: config.authorEmail , // Your email id
+            pass:  config.authorPass // Your password
         }
       }); 
 /* // code if i have my own smtp server
